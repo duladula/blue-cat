@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<title></title>
+		<style type="text/css">
+			#canvas{
+				box-shadow: 3px 3px 10px red;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<canvas id="canvas" width="500" height="500"></canvas>
+	</body>
+	<script type="text/javascript">
+		var canvas = document.getElementById("canvas");
+		var context = canvas.getContext('2d');
+		
+		//画头
+		context.beginPath();
+		context.arc(200,120,100,0,Math.PI*2,true);
+		context.closePath();
+		context.fillStyle = "DeepSkyBlue";
+		context.fill();
+		context.lineWidth = 2;
+//		context.strokeStyle = "	black";
+		context.stroke();
+		//小白脸
+        context.beginPath();
+		context.lineWidth = 2;
+        context.moveTo(130, 190);
+		context.bezierCurveTo(40, 20, 360, 20, 270, 190);
+		context.closePath();
+		context.lineWidth = 3;
+		context.fillStyle = "white";
+		context.strokeStyle = "CadetBlue	";
+		context.fill();
+		context.stroke();
+		//左眼
+		context.beginPath();
+		context.arc(180,50,20,0,Math.PI*2,true);
+		context.closePath();
+		context.fillStyle = "white";
+		context.fill();
+		context.stroke();
+		//闭左眼
+		context.beginPath();
+	    context.moveTo(180, 55);
+		context.quadraticCurveTo(187,40, 194, 55);
+		context.stroke();
+		//右眼
+		context.beginPath();
+		context.arc(220,50,20,0,Math.PI*2,true);
+		context.closePath();
+		context.fillStyle = "white";
+		context.fill();
+		context.stroke();
+		//闭右眼
+		context.beginPath();
+	    context.moveTo(210, 55);
+		context.quadraticCurveTo(217,40, 224, 55);
+		context.stroke();
+		//红鼻子
+		context.beginPath();
+		context.arc(200,75,15,0,Math.PI*2,true);
+		context.closePath();
+		context.fillStyle = "red";
+		context.fill();
+		context.stroke();
+		//鼻子白点
+		context.beginPath();
+		context.arc(195,70,7,0,Math.PI*2,true);
+		context.closePath();
+		context.fillStyle = "white";
+		context.fill();
+		context.stroke();
+	  //胡子
+	  	context.beginPath();
+		context.moveTo(200,90);
+		context.lineTo(200,170);
+		
+		context.moveTo(180,100);
+		context.lineTo(130,90);
+		
+		context.moveTo(180,110);
+		context.lineTo(125,110);
+		
+		context.moveTo(180,120);
+		context.lineTo(125,130);
+		
+		context.moveTo(220,100);
+		context.lineTo(270,90);
+		
+		context.moveTo(220,110);
+		context.lineTo(275,110);
+		
+		context.moveTo(220,120);
+		context.lineTo(275,130);
+		context.lineWidth = 2;
+	    context.strokeStyle = "CadetBlue	";
+		context.stroke();
+	  
+	  //嘴巴
+	  	context.beginPath();
+	    context.moveTo(130, 120);
+		context.quadraticCurveTo(200,220, 270, 120);
+
+		context.stroke();
+		//造假....
+		
+		
+		context.beginPath();
+	    	context.moveTo(130,190);
+		context.lineTo(108,240);
+		context.lineTo(290,240);
+		context.lineTo(271,190);
+		context.lineTo(130,190);
+		context.strokeStyle = "deepskyblue";
+		context.stroke()
+		context.fillStyle = "deepskyblue";
+   		context.fill();
+
+		
+		//身体
+		context.beginPath();
+		context.fillStyle = "deepskyblue";
+		context.fillRect(133,190,132,150);
+		context.stroke();
+		
+		
+		//body
+		context.beginPath();
+	    context.strokeStyle = "CadetBlue	";
+	   context.strokeStyle = "black";
+	   //上线
+        context.moveTo(130,190);
+		context.lineTo(270,190);
+		//左胳膊线
+		context.moveTo(130, 190);
+		context.quadraticCurveTo(90,240, 100, 260);
+		
+		
+		//胳膊腰
+		context.moveTo(100, 260);
+		context.quadraticCurveTo(90,240, 130, 260);
+		
+		
+		//左腰线
+		context.moveTo(132.5, 220);
+		context.quadraticCurveTo(120,260, 136, 340);
+		//左下腿
+		context.moveTo(136, 340);
+		context.quadraticCurveTo(190,350, 200, 340);
+		
+		//右下腿
+		context.moveTo(200, 340);
+		context.quadraticCurveTo(210,350, 264, 340);
+		//右腰
+		context.moveTo(270, 190);
+		context.quadraticCurveTo(310,240, 300, 260);
+		
+		//胳膊腰
+		context.moveTo(300, 260);
+		context.quadraticCurveTo(300,240, 264, 260);
+		
+		//右胳膊
+		context.moveTo(264, 340);
+		context.quadraticCurveTo(280,260, 264, 220);
+		
+		
+		    context.stroke();
+          	context.closePath();
+		    context.fillStyle = "deepskyblue";
+ 	
+ 		    context.fill();
+		
+		
+		
+		//左手
+		context.beginPath();
+		context.arc(110,250,20,0,Math.PI*2,true);
+		context.closePath();
+		context.fillStyle = "white";
+		context.fill();
+		context.stroke();
+		//右手
+		context.beginPath();
+		context.arc(290,250,20,0,Math.PI*2,true);
+		context.closePath();
+		context.fillStyle = "white";
+		context.fill();
+		context.stroke();
+		//肚肚
+		context.beginPath();
+		context.arc(200,250,56,0,Math.PI*2,true);
+		context.closePath();
+		context.fillStyle = "white";
+		context.fill();
+		context.stroke();
+		
+		
+	
+		//肚兜
+		context.beginPath();
+		context.arc(200,250,44,Math.PI,Math.PI*2,true);
+		context.closePath();
+//		context.strokeStyle = "brown";
+		context.fillStyle = "white";
+		context.fill();
+		context.stroke();
+		//红线
+	    context.beginPath();
+	    	context.moveTo(130,183);
+		context.lineTo(128,190);
+		context.lineTo(270,190);
+		context.lineTo(268,183);
+		context.lineTo(130,183);
+		context.stroke()
+		context.fillStyle = "Crimson";
+ 		context.fill();
+		
+//		context.fillStyle = "red";
+//		context.fillRect(130,190,140,10);
+//		context.stroke();
+			//铃铛
+		context.beginPath();
+		context.arc(200,210,20,0,Math.PI*2,true)
+		context.stroke();
+		context.fillStyle = "yellow";
+		context.fill();
+		//铃铛蓝条
+        context.beginPath();
+	    	context.moveTo(184,200);
+		context.lineTo(178,206);
+		context.lineTo(222,206);
+		context.lineTo(216,200);
+		context.lineTo(184,200);
+		context.stroke()
+		context.fillStyle = "skyblue";
+   		context.fill();
+   		//铃铛孔
+   		context.beginPath();
+		context.arc(200,216,5,0,Math.PI*2,true)
+		context.stroke();
+		context.fillStyle = "skyblue";
+		context.fill();
+		
+		//铃铛孔线
+		context.beginPath();
+		context.moveTo(200,222);
+		context.lineTo(200,230);
+		context.stroke();
+	
+	
+   		
+		//左脚
+		context.beginPath();
+		context.moveTo(136, 340);
+		context.bezierCurveTo( 90, 380,210, 372, 200, 360);
+		context.stroke()
+		//右脚
+		context.beginPath();
+		context.moveTo(200, 360);
+		context.bezierCurveTo( 210, 380,  306, 370,  264, 340);
+		context.stroke()
+		//裤裆
+		context.beginPath();
+		context.moveTo(195, 330);
+		context.quadraticCurveTo(200,328, 205, 330);
+		context.stroke()
+		
+		context.beginPath();
+		context.moveTo(200, 330);
+		context.lineTo(200,360);
+		context.stroke()
+		
+		
+		
+	
+		
+		
+		
+	</script>
+</html>
